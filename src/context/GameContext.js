@@ -24,19 +24,19 @@ const GameProvider = ({ children }) => {
           let categoryParam = '';
           switch (category) {
             case 'coding':
-              categoryParam = '18'; // Computers: Science & Nature
+              categoryParam = '18'; 
               break;
             case 'general':
-              categoryParam = '9'; // General Knowledge
+              categoryParam = '9';
               break;
             case 'science':
-              categoryParam = '17'; // Science & Nature
+              categoryParam = '17'; 
               break;
             case 'aptitude':
-              categoryParam = '19'; // Mathematics
+              categoryParam = '19';
               break;
             default:
-              categoryParam = '9'; // Default to General Knowledge
+              categoryParam = '9'; 
           }
           const response = await axios.get(`https://opentdb.com/api.php?amount=10&category=${categoryParam}&type=multiple`);
           setQuestions(response.data.results);
